@@ -124,7 +124,7 @@ class _Parallax extends SingleChildRenderObjectWidget {
       ..image = image!
       ..scrollPosition = scrollPosition!
       ..screenSize = screenSize!
-      ..color = color!;
+      ..color = color;
   }
 }
 
@@ -174,7 +174,7 @@ class _RenderParallax extends RenderProxyBox {
     markNeedsPaint();
   }
 
-  set color(Color value) {
+  set color(Color? value) {
     if (value == _color) return;
     _color = value;
     _painter?.dispose();
